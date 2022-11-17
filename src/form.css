@@ -8,7 +8,7 @@
 .formInput {
     margin: 5px 5px 5px 5px;
     padding: 10px 10px 10px 10px;
-    width: 180px;
+    width: 300px;
 }
 
 .formSubmit {
@@ -19,4 +19,13 @@
 
 .formRobot {
     text-align: center;
+}
+
+.buttonRobot {
+    width: 300px;
+
+}
+
+.formRobot {
+    margin: 10px 10px 10px 10px;
 }

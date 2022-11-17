@@ -1,6 +1,9 @@
 import React from "react";
 import "./form.css"
 import { useState, useEffect } from "react";
+import { TextField } from '@mui/material';
+import Button from '@mui/material/Button';
+
 
 export const Form = () => {
     const [name, setName] = useState("");
@@ -12,7 +15,7 @@ export const Form = () => {
         console.log("form", name, surname, email);
     };
 
-    const Type = useEffect(() => {
+    const FormEvent = useEffect(() => {
         const robotSaid = document.querySelector(".formRobot");
         const nameId = document.getElementById("name");
         const surnameId = document.getElementById("surname");
@@ -32,36 +35,37 @@ export const Form = () => {
 
     return (
         <div className="Form">
-            <form className="formStyle">
-                <input
+            <form className="formStyle" onChange={FormEvent}>
+                   <TextField
                     className="formInput"
                     id="name"
+                    margin="normal"
                     value={name}
                     type="text"
                     placeholder="Имя"
                     onChange={(e) => setName(e.target.value)}
                 />
-                <input
+                <TextField
                     className="formInput"
                     id="surname"
+                    margin="normal"
                     value={surname}
                     type="text"
                     placeholder="Фамилия"
                     onChange={(e) => setSurname(e.target.value)}
                 />
-                <input
+                <TextField
                     className="formInput"
                     id="email"
+                    margin="normal"
                     value={email}
                     type="email"
                     placeholder="mail@mail.ru"
                     onChange={(e) => setEmail(e.target.value)}
                 />
-                <button className="formSubmit" type="submit" onClick={submitForm}>
-                    отправить
-                </button>
+                <Button className="buttonRobot" type="submit" onClick={submitForm} autoFocus={true} variant="outlined">Отправить</Button>
             </form>
             <div className="formRobot">Робот..</div>
         </div >
-    );
-};
+    )
+}
