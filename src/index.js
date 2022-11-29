@@ -1,21 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import { BrowserRouter } from 'react-router-dom';
+import './index.scss';
 import App from './App';
-import { MessageList } from './MessageList';
-import { Form } from './Form';
-import { Chat } from './chat';
-
+import { Provider } from 'react-redux'
+import { store } from './store/store'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <React.StrictMode>
+  <React.StrictMode>
+    <Provider store={store}>
+      <BrowserRouter>
         <App />
-        <MessageList />
-        <Chat />
-        <Form />
-    </React.StrictMode>
+      </BrowserRouter>
+    </Provider>
+  </React.StrictMode>
 );
-
-
 
