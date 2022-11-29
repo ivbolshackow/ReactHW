@@ -1,0 +1,27 @@
+$width: 1180px;
+
+.header {
+    background-color: rgb(91, 192, 255);
+}
+
+.container {
+    width: $width;
+    margin: 0 auto;
+}
+
+.header-links {
+    display: flex;
+    justify-content: space-between;
+
+    & {
+        .header-link {
+            margin: 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 700;
+            width: 200px;
+            text-align: center;
+        }
+    }
+}

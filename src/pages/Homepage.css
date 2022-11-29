@@ -1,0 +1,32 @@
+.formStyle {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.formInput {
+    margin: 5px 5px 5px 5px;
+    padding: 10px 10px 10px 10px;
+    width: 300px;
+}
+
+.formSubmit {
+    width: 204px;
+    padding: 10px 10px 10px 10px;
+    margin: 5px 0px 10px 0px;
+}
+
+.formRobot {
+    text-align: center;
+}
+
+.buttonRobot {
+    width: 300px;
+
+}
+
+.formRobot {
+    padding: 10px 10px 10px 10px;
+    background-color: #def7ff;
+}
