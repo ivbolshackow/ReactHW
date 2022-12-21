@@ -20,8 +20,6 @@ export const Homepage = () => {
         const nameId = document.getElementById("name");
         const surnameId = document.getElementById("surname");
         const emailId = document.getElementById("email");
-
-
         if (
             nameId.value.length > 0 &&
             surnameId.value.length > 0 &&
